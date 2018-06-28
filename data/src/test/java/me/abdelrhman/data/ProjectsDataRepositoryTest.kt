@@ -142,7 +142,7 @@ class ProjectsDataRepositoryTest {
                 .thenReturn(observable)
     }
 
-     fun stubFactoryGetDataStore() {
+     private fun stubFactoryGetDataStore() {
         whenever(factory.getDataStore(DataFactory.randomBoolean(), DataFactory.randomBoolean()))
                 .thenReturn(store)
     }
