@@ -1,0 +1,15 @@
+package me.abdelrhman.remote.model
+
+import com.google.gson.annotations.SerializedName
+
+/**
+ * Created by Abdelrhman
+ * on 6/28/18.
+ */
+
+
+class ProjectModel(val id: String, val name: String,
+                   @SerializedName("full_name") val fullName: String,
+                   @SerializedName("stargazers_count") val starCount: Int,
+                   @SerializedName("created_at") val dateCreated: String,
+                   val owner: OwnerModel)
