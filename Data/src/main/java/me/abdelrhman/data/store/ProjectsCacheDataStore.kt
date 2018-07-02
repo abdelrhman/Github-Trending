@@ -13,7 +13,7 @@ import javax.inject.Inject
  */
 open class ProjectsCacheDataStore @Inject constructor(private val projectsCash: ProjectsCache) : ProjectsDataStore {
     override fun saveProjects(projects: List<ProjectEntity>): Completable {
-        return projectsCash.saveProjects(projects).andThen(projectsCash.setLastCashTime(System.currentTimeMillis()))
+        return projectsCash.saveProjects(projects).andThen(projectsCash.setLastCacheTime(System.currentTimeMillis()))
     }
 
     override fun clearProjects(): Completable {

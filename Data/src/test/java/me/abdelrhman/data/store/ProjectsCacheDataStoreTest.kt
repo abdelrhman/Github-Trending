@@ -155,7 +155,7 @@ class ProjectsCacheDataStoreTest {
 
 
     private fun stubProjectsLastCache(completable: Completable) {
-        whenever(cache.setLastCashTime(any())).thenReturn(completable)
+        whenever(cache.setLastCacheTime(any())).thenReturn(completable)
     }
 
     private fun stubProjectsCacheSaveProjects(completable: Completable) {
